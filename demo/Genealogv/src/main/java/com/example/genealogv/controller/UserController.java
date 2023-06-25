@@ -1,5 +1,5 @@
 package com.example.genealogv.controller;
-//用户
+//用户控制器
 import com.example.genealogv.entity.User;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
