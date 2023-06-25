@@ -1,4 +1,7 @@
 package com.example.genealogv.mapper;
 
-public interface InccidentMapper {
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.genealogv.entity.Inccident;
+
+public interface InccidentMapper{
 }

@@ -1,43 +1,56 @@
 package com.example.genealogv.controller;
-//用户控制器
+
 import com.example.genealogv.entity.User;
-import io.swagger.annotations.ApiOperation;
+import com.example.genealogv.mapper.UserMapper;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Collections;
+import java.util.List;
 
 @RestController
 public class UserController {
 
-    @ApiOperation("获取用户")
-    @GetMapping("/user/{id}")
-    public String getUserByld(@PathVariable int id){
+    @Autowired//注入userMapper
+    private UserMapper userMapper;
+    @GetMapping("/user")
+    public List query(User user){
+       List<User> list=userMapper.find();
+        System.out.println(list);
 
-        System.out.println(id);
-        return"根据ID获取用户信息";
+
+        return list;
 
     }
-
-    @ApiOperation("添加用户")
+   /* @GetMapping("/user/{User_id}")
+    public String gstById(@PathVariable int User_id){
+        userMapper.findByID();
+        System.out.println(User_id);
+        return "根据ID查询";
+    }*/
     @PostMapping("/user")
-    public String save(User user){
-
-        return"添加用户";
+    public List saveUser(User user){
+        int i = userMapper.insert(user);
+        if(i>0){
+            return Collections.singletonList("插入成功");
+        }
+        else {
+            return Collections.singletonList("插入失败");
+        }
 
     }
-
-    @ApiOperation("修改用户")
     @PutMapping("/user")
-    public String update(User user){
-
-        return "更新用户";
-
+    public List update(User user){
+        userMapper.update(user);
+        return Collections.singletonList("修改成功");
     }
-
-    @ApiOperation("删除用户")
-    @DeleteMapping("/user/{id}")
-    public String deleteByld(@PathVariable int id){
-
-        System.out.println(id);
-        return "根据ID删除用户";
+    @DeleteMapping("/user")
+    public List deleteUser(User user){
+        userMapper.delete(user.getId());
+        return Collections.singletonList("删除成功");
     }
 
 

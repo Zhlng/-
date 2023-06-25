@@ -1,39 +1,40 @@
 package com.example.genealogv.entity;
 //关系表
 public class Relation {
-    private int Personnel_id1;
-    private int Personnel_id2;
-    private String Personnel_type;
-    public int getPersonnel_id1() {
-        return Personnel_id1;
+   private int PersonnelId1;
+   private int PersonnelId2;
+   private String RelationType;
+
+    public int getPersonnelId1() {
+        return PersonnelId1;
     }
 
-    public void setPersonnel_id1(int personnel_id1) {
-        Personnel_id1 = personnel_id1;
+    public void setPersonnelId1(int personnelId1) {
+        PersonnelId1 = personnelId1;
     }
 
-    public int getPersonnel_id2() {
-        return Personnel_id2;
+    public int getPersonnelId2() {
+        return PersonnelId2;
     }
 
-    public void setPersonnel_id2(int personnel_id2) {
-        Personnel_id2 = personnel_id2;
+    public void setPersonnelId2(int personnelId2) {
+        PersonnelId2 = personnelId2;
     }
 
-    public String getPersonnel_type() {
-        return Personnel_type;
+    public String getRelationType() {
+        return RelationType;
     }
 
-    public void setPersonnel_type(String personnel_type) {
-        Personnel_type = personnel_type;
+    public void setRelationType(String relationType) {
+        RelationType = relationType;
     }
 
     @Override
     public String toString() {
         return "Relation{" +
-                "Personnel_id1=" + Personnel_id1 +
-                ", Personnel_id2=" + Personnel_id2 +
-                ", Personnel_type='" + Personnel_type + '\'' +
+                "PersonnelId1=" + PersonnelId1 +
+                ", PersonnelId2=" + PersonnelId2 +
+                ", RelationType='" + RelationType + '\'' +
                 '}';
     }
 }

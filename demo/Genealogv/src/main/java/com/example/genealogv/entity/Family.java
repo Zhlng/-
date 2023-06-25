@@ -1,61 +1,62 @@
 package com.example.genealogv.entity;
 //家族表
 public class Family {
-    private int Family_id;
-    private int User_id;
-    private String Family_name;
-    private String Family_intro;
-    private String Family_date;
+    private int FamilyId;
+    private int Id;
+    private String FamilyName;
+    private String FamilyDescription;
+    private String FamilyDate;
 
-    public String getFamily_date() {
-        return Family_date;
+    public int getFamilyId() {
+        return FamilyId;
     }
 
-    public void setFamily_date(String family_date) {
-        Family_date = family_date;
+    public void setFamilyId(int familyId) {
+        FamilyId = familyId;
     }
 
-    public String getFamily_intro() {
-        return Family_intro;
+    public int getId() {
+        return Id;
     }
 
-    public void setFamily_intro(String family_intro) {
-        Family_intro = family_intro;
+    public void setId(int id) {
+        Id = id;
     }
 
-    public String getFamily_name() {
-        return Family_name;
+    public String getFamilyName() {
+        return FamilyName;
     }
 
-    public void setFamily_name(String family_name) {
-        Family_name = family_name;
+    public void setFamilyName(String familyName) {
+        FamilyName = familyName;
     }
 
-    public int getUser_id() {
-        return User_id;
+    public String getFamilyDescription() {
+        return FamilyDescription;
     }
 
-    public void setUser_id(int user_id) {
-        User_id = user_id;
+    public void setFamilyDescription(String familyDescription) {
+        FamilyDescription = familyDescription;
     }
 
-    public int getFamily_id() {
-        return Family_id;
+    public String getFamilyDate() {
+        return FamilyDate;
     }
 
-    public void setFamily_id(int family_id) {
-        Family_id = family_id;
+    public void setFamilyDate(String familyDate) {
+        FamilyDate = familyDate;
     }
 
     @Override
     public String toString() {
         return "Family{" +
-                "Family_id=" + Family_id +
-                ", User_id=" + User_id +
-                ", Family_name='" + Family_name + '\'' +
-                ", Family_intro='" + Family_intro + '\'' +
-                ", Family_date='" + Family_date + '\'' +
+                "FamilyId=" + FamilyId +
+                ", Id=" + Id +
+                ", FamilyName='" + FamilyName + '\'' +
+                ", FamilyDescription='" + FamilyDescription + '\'' +
+                ", FamilyDate='" + FamilyDate + '\'' +
                 '}';
     }
 }
-//alt+insert快速导入方法
+
+

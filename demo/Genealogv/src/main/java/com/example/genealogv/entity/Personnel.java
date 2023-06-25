@@ -1,70 +1,71 @@
 package com.example.genealogv.entity;
 //成员表
 public class Personnel {
-    private int Personnel_id;
-    private String Personnel_name;
-    private String Personnel_sex;
-    private String Personnel_birthdate;
-    private String Personnel_deathdate;
-    private int Family_id;
 
-    public String getPersonnel_name() {
-        return Personnel_name;
+    private int PersonnelId;
+    private int FamilyId;
+    private String PersonnelName;
+    private String PersonnelSex;
+    private String PersonnelBrithdate;
+    private String PersonnelDeathdate;
+
+    public int getPersonnelId() {
+        return PersonnelId;
     }
 
-    public void setPersonnel_name(String personnel_name) {
-        Personnel_name = personnel_name;
+    public void setPersonnelId(int personnelId) {
+        PersonnelId = personnelId;
     }
 
-    public int getFamily_id() {
-        return Family_id;
+    public int getFamilyId() {
+        return FamilyId;
     }
 
-    public void setFamily_id(int family_id) {
-        Family_id = family_id;
+    public void setFamilyId(int familyId) {
+        FamilyId = familyId;
     }
 
-    public String getPersonnel_deathdate() {
-        return Personnel_deathdate;
+    public String getPersonnelName() {
+        return PersonnelName;
     }
 
-    public void setPersonnel_deathdate(String personnel_deathdate) {
-        Personnel_deathdate = personnel_deathdate;
+    public void setPersonnelName(String personnelName) {
+        PersonnelName = personnelName;
     }
 
-    public String getPersonnel_birthdate() {
-        return Personnel_birthdate;
+    public String getPersonnelSex() {
+        return PersonnelSex;
     }
 
-    public void setPersonnel_birthdate(String personnel_birthdate) {
-        Personnel_birthdate = personnel_birthdate;
+    public void setPersonnelSex(String personnelSex) {
+        PersonnelSex = personnelSex;
     }
 
-    public String getPersonnel_sex() {
-        return Personnel_sex;
+    public String getPersonnelBrithdate() {
+        return PersonnelBrithdate;
     }
 
-    public void setPersonnel_sex(String personnel_sex) {
-        Personnel_sex = personnel_sex;
+    public void setPersonnelBrithdate(String personnelBrithdate) {
+        PersonnelBrithdate = personnelBrithdate;
     }
 
-    public int getPersonnel_id() {
-        return Personnel_id;
+    public String getPersonnelDeathdate() {
+        return PersonnelDeathdate;
     }
 
-    public void setPersonnel_id(int personnel_id) {
-        Personnel_id = personnel_id;
+    public void setPersonnelDeathdate(String personnelDeathdate) {
+        PersonnelDeathdate = personnelDeathdate;
     }
 
     @Override
     public String toString() {
         return "Personnel{" +
-                "Personnel_id=" + Personnel_id +
-                ", Personnel_name='" + Personnel_name + '\'' +
-                ", Personnel_sex='" + Personnel_sex + '\'' +
-                ", Personnel_birthdate='" + Personnel_birthdate + '\'' +
-                ", Personnel_deathdate='" + Personnel_deathdate + '\'' +
-                ", Family_id=" + Family_id +
+                "PersonnelId=" + PersonnelId +
+                ", FamilyId=" + FamilyId +
+                ", PersonnelName='" + PersonnelName + '\'' +
+                ", PersonnelSex='" + PersonnelSex + '\'' +
+                ", PersonnelBrithdate='" + PersonnelBrithdate + '\'' +
+                ", PersonnelDeathdate='" + PersonnelDeathdate + '\'' +
                 '}';
     }
 }

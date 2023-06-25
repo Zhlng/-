@@ -1,40 +1,43 @@
 package com.example.genealogv.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 public class User {
-    private int User_id;
-    private String User_name;
-    private String User_password;
+    private int id;
+    private String name;
+    private String password;
 
-    public int getUser_id() {
-        return User_id;
+    public int getId() {
+        return id;
     }
 
-    public void setUser_id(int user_id) {
-        User_id = user_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getUser_name() {
-        return User_name;
+    public String getName() {
+        return name;
     }
 
-    public void setUser_name(String user_name) {
-        User_name = user_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getUser_password() {
-        return User_password;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUser_password(String user_password) {
-        User_password = user_password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "User_id=" + User_id +
-                ", User_name='" + User_name + '\'' +
-                ", User_password='" + User_password + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
+
