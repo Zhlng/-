@@ -2,6 +2,11 @@ package com.example.genealogv.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.genealogv.entity.Personnel;
+import org.apache.ibatis.annotations.*;
 
-public interface PersonnelMapper {
+import java.util.List;
+
+@Mapper
+public interface PersonnelMapper extends BaseMapper<Personnel> {
+
 }

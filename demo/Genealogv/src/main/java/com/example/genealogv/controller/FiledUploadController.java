@@ -1,14 +1,22 @@
 package com.example.genealogv.controller;
 //上传文件
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 
-public class FiledUploadController { @PostMapping("/upload")
-public String up(String nickname, MultipartFile photo, HttpServletRequest request) throws IOException {
+@RestController
+@Api("上传文件管理")
+@RequestMapping("upload")
+public class FiledUploadController {
+    @PostMapping("/upload")
+
+    public String up(String nickname, MultipartFile photo, HttpServletRequest request) throws IOException {
     System.out.println(nickname);
     //获取图片原始名称
     System.out.println(photo.getOriginalFilename());

@@ -1,60 +1,20 @@
 package com.example.genealogv.entity;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Service;
+
 //事件表
+@Data
 public class Inccident {
+    @TableField("PersonnelId")
     private int PersonnelId;
+    @DateTimeFormat(pattern ="yyy-MM-dd")
     private String InccidentDate;
     private String InccidentDescription;
     private String InccidentType;
     private String InccidentAttachments;
 
-    public int getPersonnelId() {
-        return PersonnelId;
-    }
 
-    public void setPersonnelId(int personnelId) {
-        PersonnelId = personnelId;
-    }
-
-    public String getInccidentDate() {
-        return InccidentDate;
-    }
-
-    public void setInccidentDate(String inccidentDate) {
-        InccidentDate = inccidentDate;
-    }
-
-    public String getInccidentDescription() {
-        return InccidentDescription;
-    }
-
-    public void setInccidentDescription(String inccidentDescription) {
-        InccidentDescription = inccidentDescription;
-    }
-
-    public String getInccidentType() {
-        return InccidentType;
-    }
-
-    public void setInccidentType(String inccidentType) {
-        InccidentType = inccidentType;
-    }
-
-    public String getInccidentAttachments() {
-        return InccidentAttachments;
-    }
-
-    public void setInccidentAttachments(String inccidentAttachments) {
-        InccidentAttachments = inccidentAttachments;
-    }
-
-    @Override
-    public String toString() {
-        return "Inccident{" +
-                "PersonnelId=" + PersonnelId +
-                ", InccidentDate='" + InccidentDate + '\'' +
-                ", InccidentDescription='" + InccidentDescription + '\'' +
-                ", InccidentType='" + InccidentType + '\'' +
-                ", InccidentAttachments='" + InccidentAttachments + '\'' +
-                '}';
-    }
 }
