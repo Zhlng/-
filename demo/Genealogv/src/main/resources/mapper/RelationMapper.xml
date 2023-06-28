@@ -5,7 +5,7 @@
 <!--namespace = 所需实现的接口全限定名-->
 <mapper namespace="com.example.genealogv.mapper.RelationMapper">
     <select id="list" resultType="com.example.genealogv.mapper.RelationMapper">
-        select * from Relation
+        select * from relation
     </select>
 
 

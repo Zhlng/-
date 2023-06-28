@@ -4,9 +4,10 @@
 
 <!--namespace = 所需实现的接口全限定名-->
 <mapper namespace="com.example.genealogv.mapper.PersonnelMapper">
-    <insert id="insert">
- insert into Personnel()
-        values ()
-    </insert>
+    <select id="list"
+            resultType="com.example.genealogv.mapper.PersonnelMapper">
+        select *
+        from personnel
+    </select>
 
 </mapper>
