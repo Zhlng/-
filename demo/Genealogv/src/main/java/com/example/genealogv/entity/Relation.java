@@ -14,6 +14,7 @@ public class Relation implements Serializable {
    private int  PersonnelId1;
    private int  PersonnelId2;
    private String RelationType;
+   private String Elder;
    @TableLogic
    @TableField(fill = FieldFill.INSERT)
    private int Deleted;
