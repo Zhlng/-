@@ -37,7 +37,7 @@ public List query(){
     List<Family>list=familyMapper.selectList(null);
     System.out.println(list);
     return list;
-}*/
+}分页*/
 @ApiOperation("查看全部家族")
 @GetMapping("/list")
 public List<Family> list(){

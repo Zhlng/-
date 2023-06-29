@@ -13,16 +13,14 @@ import java.util.List;
 //成员表
 @Data
 public class Personnel implements Serializable {
-@TableId
-@TableField("PersonnelId")
     private int PersonnelId;
     private int FamilyId;
     private String PersonnelName;
-    private String Sex;
+    private String PersonnelSex;
     @DateTimeFormat(pattern ="yyy-MM-dd")
-    private String Brithdate;
+    private String PersonnelBrithdate;
     @DateTimeFormat(pattern ="yyy-MM-dd")
-    private String Deathdate;
+    private String PersonnelDeathdate;
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;

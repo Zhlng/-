@@ -6,8 +6,7 @@
 <mapper namespace="com.example.genealogv.mapper.PersonnelMapper">
     <select id="list"
             resultType="com.example.genealogv.mapper.PersonnelMapper">
-        select *
-        from personnel
+        select *from personnel
     </select>
 
 </mapper>

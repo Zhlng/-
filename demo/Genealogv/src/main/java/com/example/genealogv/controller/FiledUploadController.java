@@ -1,6 +1,7 @@
 package com.example.genealogv.controller;
 //上传文件
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import java.io.IOException;
 @Api("上传文件管理")
 @RequestMapping("upload")
 public class FiledUploadController {
+    @ApiOperation("上传文件")
     @PostMapping("/upload")
 
     public String up(String nickname, MultipartFile photo, HttpServletRequest request) throws IOException {
