@@ -8,6 +8,7 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 //成员表
@@ -21,6 +22,8 @@ public class Personnel implements Serializable {
     private String PersonnelBrithdate;
     @DateTimeFormat(pattern ="yyy-MM-dd")
     private String PersonnelDeathdate;
+    @TableField(fill = FieldFill.INSERT)
+    private Date logtime;
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;

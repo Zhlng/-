@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 //关系表
 @Data
@@ -15,6 +16,8 @@ public class Relation implements Serializable {
    private int  PersonnelId2;
    private String RelationType;
    private String Elder;
+   @TableField(fill = FieldFill.INSERT)
+   private Date logtime;
    @TableLogic
    @TableField(fill = FieldFill.INSERT)
    private int Deleted;

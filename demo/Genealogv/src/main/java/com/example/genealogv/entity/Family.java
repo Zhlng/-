@@ -10,6 +10,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -26,6 +27,8 @@ public class Family implements Serializable {
 
    /* @TableField(exist = false)//表中不存在这个属性
     private User user;*/
+   @TableField(fill = FieldFill.INSERT)
+   private Date logtime;
 
     @TableLogic
     @TableField(fill = FieldFill.INSERT)

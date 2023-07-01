@@ -8,6 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
+import java.util.Date;
 
 //事件表
 @Data
@@ -18,6 +19,8 @@ public class Inccident implements Serializable {
     private String InccidentDescription;
     private String InccidentType;
     private String InccidentAttachments;
+    @TableField(fill = FieldFill.INSERT)
+    private Date logtime;
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;

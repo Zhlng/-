@@ -1,27 +1,18 @@
 package com.example.genealogv.controller;
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.example.genealogv.entity.Family;
 import com.example.genealogv.entity.User;
-import com.example.genealogv.mapper.FamilyMapper;
-import com.example.genealogv.mapper.UserMapper;
 import com.example.genealogv.service.UserService;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.sun.org.apache.xml.internal.serialize.BaseMarkupSerializer;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-import org.yaml.snakeyaml.events.Event;
 
-import java.util.Collections;
 import java.util.List;
 @RestController
 
 @RequestMapping("/user")
-public class UserController  {
+public class UserController{
 
 @Autowired
     private UserService userService;
