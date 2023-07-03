@@ -35,7 +35,10 @@
           </el-form-item>
         </el-form>
         <!-- 注册 -->
-        <!-- <h1>注册</h1> -->
+        <RegisterFrom
+        :registerUser="registerUser"
+        :registerRules="registerRules"
+        ></RegisterFrom>
       </div>
     </div>
     <!-- 左右切换动画 -->
@@ -64,43 +67,33 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, reactive, getCurrentInstance } from 'vue'
+import {loginUser,rules} from '@/utils/loginValidators'
+import {registerUser,registerRules} from '@/utils/registerValidator'
+import LoginForm from "@/components/LoginForm.vue";
+import RegisterFrom from "@/components/RegisterFrom.vue";
 export default {
   name: 'LoginRegister',
-  components: {},
+  components: {
+    LoginForm,
+    RegisterFrom
+  },
   // Vue3语法糖
   // Vue2是通过data和methods传递数据和方法
   // Vue3将data和methods直接耦合在了一起
   setup() {
     // 通过解构getCurrentInstance，获取this，这里的this就是ctx
+    //@ts-ignore
     const { ctx } = getCurrentInstance()
     // 登录/注册模式
     const signUpMode = ref(false)
     // 登录表单
-    const loginUser = reactive({
-      email: '',
-      password: ''
-    })
-    // 校验规则
-    const rules = reactive({
-      email: [
-        {
-          required: true,
-          type: 'email',
-          message: 'email格式错误',
-          trigger: 'blur'
-        }
-      ],
-      password: [
-        { required: true, message: '密码不得为空', trigger: 'blur' },
-        { min: 6, max: 30, message: '密码长度必须在6到30之间', trigger: 'blur' }
-      ]
-    })
+
     // 触发登录方法
-    const handleLogin = (formName) => {
+    const handleLogin = (formName:String) => {
       console.log(ctx)
-      ctx.$refs[formName].validate((valid) => {
+      ctx.$refs[formName].validate((valid:boolean) => {
         if (valid) {
           console.log('submit!')
         } else {
@@ -109,11 +102,10 @@ export default {
         }
       })
     }
-    return { signUpMode, loginUser, rules, handleLogin }
+    return { signUpMode, loginUser, rules, handleLogin,registerUser,registerRules }
   }
 }
 </script>
-
 
 <style scoped>
 .container {
@@ -479,5 +471,6 @@ form.sign-up-form {
   color: #409eff;
 }
 </style>
+
 
 
