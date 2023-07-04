@@ -14,7 +14,7 @@
       <el-table-column prop="inccidentDate" label="事迹时间" />
       <el-table-column prop="inccidentType" label="类型" />
       <el-table-column prop="inccidentDescription" label="内容" />
-      <el-table-column prop="inccidentAttachments" label="奖励" />
+      <el-table-column prop="inccidentAttachments" label="附件" />
       <el-table-column label="操作">
         <template #default="scope">
           <el-button
@@ -82,7 +82,7 @@
           <el-input v-model="form.inccidentDescription" autocomplete="off" />
         </el-form-item>
         <el-form-item
-          label="奖励"
+          label="附件"
           :label-width="formLabelWidth"
           prop="inccidentAttachments"
         >
