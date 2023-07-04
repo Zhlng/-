@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace = 所需实现的接口全限定名-->
+<mapper namespace="com.example.genealogv.mapper.PersonnelMapper">
+    <select id="list"
+            resultType="com.example.genealogv.mapper.PersonnelMapper">
+        select *from personnel
+    </select>
+
+    <select id="getMaxId" resultType="com.example.genealogv.entity.Personnel">
+        SELECT MAX(personnel_id) as personnelId FROM `personnel`
+    </select>
+
+    <select id="getById" resultType="com.example.genealogv.entity.Personnel">
+        SELECT * FROM `personnel` where personnel_Id = #{personnelId}
+    </select>
+
+    <select id="get" resultType="com.example.genealogv.entity.Personnel">
+        SELECT * FROM `personnel` where Family_id = #{familyId}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from personnel where personnel_Id = #{personnelId}
+    </delete>
+
+</mapper>
