@@ -1,3 +1,0 @@
-INSERT INTO wdl.inccident (personnel_id, inccident_date, inccident_description, inccident_type, inccident_attachments, logtime, deleted) VALUES (7, '2011-08-19', '精神疾病于43岁自杀', '自杀', '无', '2023-07-04 22:10:30', 0);
-INSERT INTO wdl.inccident (personnel_id, inccident_date, inccident_description, inccident_type, inccident_attachments, logtime, deleted) VALUES (4, '1995-06-01', '26岁因癫痫去世', '病故', '无', '2023-07-04 22:18:06', 0);
-INSERT INTO wdl.inccident (personnel_id, inccident_date, inccident_description, inccident_type, inccident_attachments, logtime, deleted) VALUES (2, '1', '1', '1', '11', '2023-07-05 00:13:51', 1);
