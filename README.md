@@ -8,7 +8,12 @@
 后端架构：Springboot + Mybatis—plus  
 架构图：
 ![](https://img1.imgtp.com/2023/07/04/2MGZyd9P.png)   
-## 二. 项目运行展示
+## 二. 项目结构和模块说明
+### 1前端文件结构
+![](https://img1.imgtp.com/2023/07/04/A3zZGAcs.png)
+### 2. 后端文件结构
+![](https://img1.imgtp.com/2023/07/04/Qk8pMn5r.png)
+## 三. 项目运行展示
 ### 1.登录界面
 ![](https://img1.imgtp.com/2023/07/04/hdcoy2yh.png)
 ### 2. 家庭成员信息
