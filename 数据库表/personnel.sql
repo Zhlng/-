@@ -1,0 +1,10 @@
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (1, 1, '安娜', '女', '1945-07-14', '无', '2023-07-04 16:46:44', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (2, 1, '伊皮凡', '男', '1941-09-23', '无', '2023-07-04 16:47:23', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (3, 1, '叶莲娜', '女', '1971-08-23', '无', '2023-07-04 16:49:05', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (4, 1, '莱奥尼德', '男', '1969-06-01', '1999-06-02', '2023-07-04 16:55:37', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (5, 1, '娜塔莉亚', '女', '1973-06-25', '无', '2023-07-04 17:08:24', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (6, 1, '雅科夫', '男', '1966-04-24', '无', '2023-07-04 17:14:35', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (7, 1, '奥尔伽', '女', '1968-08-19', '2011-08-19', '2023-07-04 22:07:44', 0);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (8, 1, '测试', '男', '1222', '1111', '2023-07-05 00:05:11', 1);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (9, 1, '23', '男', '23', '12', '2023-07-05 08:04:28', 1);
+INSERT INTO wdl.personnel (personnel_id, family_id, personnel_name, personnel_sex, personnel_brithdate, personnel_deathdate, logtime, deleted) VALUES (10, 3, '213', '男', '23', '21', '2023-07-05 17:43:13', 1);
